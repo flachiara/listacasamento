@@ -3,420 +3,947 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de Presentes — Flávio &amp; Ro</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Flávio & Roseli — Nosso Casamento</title>
+<meta name="description" content="Convite de Casamento — Flávio & Roseli — Edição Especial">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bd:#1E1007;--bm:#5C3D1E;--car:#B8864E;--beige:#D9C9A8;
-  --off:#F5F0E8;--gold:#C9973A;--paper:#FAF6EE;
+/* === CSS VARIABLES === */
+:root {
+  --gold: #C9973A;
+  --caramel: #B8864E;
+  --dark-brown: #1E1007;
+  --medium-brown: #5C3D1E;
+  --beige: #D9C9A8;
+  --off-white: #F5F0E8;
+  --paper: #FAF6EE;
 }
-*{margin:0;padding:0;box-sizing:border-box;}
-body{background:#E8DFD0;display:flex;justify-content:center;
-  align-items:flex-start;min-height:100vh;padding:40px 20px;
-  font-family:'DM Sans',sans-serif;}
-.card{background:var(--paper);width:620px;
-  box-shadow:0 8px 40px rgba(30,16,7,.18),0 2px 8px rgba(30,16,7,.1);
-  border:1px solid rgba(184,134,78,.25);}
-.top-border,.bottom-border{height:8px;
-  background:linear-gradient(90deg,var(--bd),var(--car),var(--gold),var(--car),var(--bd));}
-.inner{padding:44px 48px 48px;}
-.eyebrow{text-align:center;font-family:'Cormorant Garamond',serif;
-  font-size:12px;font-weight:300;letter-spacing:5px;text-transform:uppercase;
-  color:var(--car);margin-bottom:10px;}
-h1{text-align:center;font-family:'Playfair Display',serif;font-size:28px;
-  font-weight:700;color:var(--bd);line-height:1.2;margin-bottom:6px;}
-.title-sub{text-align:center;font-family:'Playfair Display',serif;
-  font-style:italic;font-size:13px;color:var(--bm);margin-bottom:8px;}
-.divider{display:flex;align-items:center;justify-content:center;
-  gap:10px;margin:16px 0 22px;}
-.divider .line{flex:1;height:1px;
-  background:linear-gradient(90deg,transparent,var(--car),transparent);max-width:160px;}
-.divider .dia{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
-.divider .dot{width:4px;height:4px;background:var(--car);border-radius:50%;}
-.sec-hd{text-align:center;font-family:'Cormorant Garamond',serif;
-  font-size:11px;font-weight:300;letter-spacing:5px;text-transform:uppercase;
-  color:var(--car);margin-bottom:18px;}
-.gift{display:flex;align-items:center;gap:14px;
-  padding:13px 0;border-bottom:1px solid rgba(184,134,78,.18);}
-.gift:last-child{border-bottom:none;}
-.gift-num{font-family:'Cormorant Garamond',serif;font-size:12px;
-  font-weight:300;color:var(--car);min-width:18px;letter-spacing:1px;
-  align-self:flex-start;padding-top:4px;}
-.gift-illo{width:72px;height:72px;flex-shrink:0;
-  border-radius:8px;overflow:hidden;
-  border:1px solid rgba(184,134,78,.2);
-  background:rgba(184,134,78,.06);
-  display:flex;align-items:center;justify-content:center;}
-.gift-illo img{width:100%;height:100%;object-fit:cover;object-position:center;}
-.gift-illo.tall img{object-fit:contain;background:#fff;}
-.gift-body{flex:1;}
-.gift-name{font-family:'Playfair Display',serif;font-size:13.5px;
-  font-weight:600;color:var(--bd);line-height:1.3;margin-bottom:2px;}
-.gift-desc{font-family:'Cormorant Garamond',serif;font-size:13px;
-  font-style:italic;color:var(--bm);line-height:1.4;}
-.gift-val{font-family:'Playfair Display',serif;font-size:15px;
-  font-weight:700;color:var(--gold);white-space:nowrap;align-self:center;}
-.fut-block{margin:6px 0;background:rgba(184,134,78,.07);
-  border:1px solid rgba(184,134,78,.22);border-radius:8px;padding:6px 12px;}
-.fut-lbl{text-align:center;font-family:'Cormorant Garamond',serif;
-  font-size:11px;font-weight:300;letter-spacing:4px;text-transform:uppercase;
-  color:var(--car);margin:8px 0 2px;}
-.mini-div{text-align:center;color:var(--gold);font-size:10px;letter-spacing:8px;margin:14px 0 6px;}
-.gift.special{border-bottom:none;padding-top:14px;margin-top:4px;}
-.gift.special .gift-name{font-style:italic;color:var(--bm);font-size:13px;
-  font-weight:400;font-family:'Cormorant Garamond',serif;}
-.gift.special .gift-val{color:var(--car);font-size:14px;}
-.pix-sec{margin-top:28px;border-top:1px solid rgba(184,134,78,.3);
-  padding-top:26px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;}
-.pix-sec h3{font-family:'Playfair Display',serif;font-size:14px;
-  font-weight:600;color:var(--bd);margin-bottom:10px;}
-.pix-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
-.pix-lbl{font-size:11px;font-weight:500;text-transform:uppercase;
-  letter-spacing:1.5px;color:var(--car);min-width:56px;}
-.pix-val{font-size:13px;color:var(--bm);background:rgba(184,134,78,.1);
-  padding:3px 10px;border-radius:4px;border:1px solid rgba(184,134,78,.2);min-width:140px;}
-.qr{width:96px;height:96px;border:1.5px dashed var(--car);border-radius:6px;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:4px;flex-shrink:0;}
-.qr span{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;
-  color:var(--car);text-align:center;line-height:1.5;}
-.footer{margin-top:28px;text-align:center;border-top:1px solid rgba(184,134,78,.2);padding-top:18px;}
-.footer-names{font-family:'Playfair Display',serif;font-style:italic;
-  font-size:20px;font-weight:400;color:var(--bm);margin-bottom:4px;}
-.footer-tag{font-family:'Cormorant Garamond',serif;font-size:12px;
-  font-weight:300;letter-spacing:3px;text-transform:uppercase;color:var(--car);}
-@media print{body{background:#fff;padding:0;} .card{box-shadow:none;width:100%;}}
+
+/* === RESET & BASE === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Montserrat', system-ui, sans-serif;
+  background-color: var(--paper);
+  color: var(--dark-brown);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+::selection { background-color: rgba(184,134,78,0.25); color: var(--dark-brown); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--beige); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--caramel); }
+
+/* === FONTS === */
+.font-editorial { font-family: 'Playfair Display', Georgia, serif; }
+.font-elegant { font-family: 'Cormorant Garamond', Georgia, serif; }
+.font-modern { font-family: 'Montserrat', system-ui, sans-serif; }
+
+/* === GRADIENT TEXT === */
+.gold-gradient-text {
+  background: linear-gradient(135deg, var(--gold), var(--caramel), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* === ORNAMENT LINE === */
+.ornament-line {
+  background: linear-gradient(90deg, transparent, var(--caramel), transparent);
+}
+
+/* === PHOTO PLACEHOLDER === */
+.photo-placeholder {
+  background: linear-gradient(135deg, var(--beige) 0%, var(--off-white) 50%, var(--beige) 100%);
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.photo-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, transparent 40%, rgba(201,151,58,0.08) 50%, transparent 60%);
+  animation: shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
+.photo-placeholder svg { opacity: 0.3; }
+.photo-placeholder span { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--medium-brown); opacity: 0.5; z-index: 1; }
+
+/* === SCROLL REVEAL ANIMATION === */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.from-left { transform: translateX(-40px); }
+.reveal.from-right { transform: translateX(40px); }
+.reveal.visible { opacity: 1; transform: translate(0, 0); }
+
+/* === COVER ANIMATION === */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0) translateX(-50%); }
+  50% { transform: translateY(8px) translateX(-50%); }
+}
+@keyframes scrollDot {
+  0%, 100% { cy: 8; }
+  50% { cy: 16; }
+}
+.anim-fade-up { animation: fadeInUp 0.8s ease forwards; }
+.anim-scale { animation: scaleIn 1s ease forwards; }
+.anim-delay-1 { animation-delay: 0.3s; opacity: 0; }
+.anim-delay-2 { animation-delay: 0.5s; opacity: 0; }
+.anim-delay-3 { animation-delay: 1s; opacity: 0; }
+.anim-delay-4 { animation-delay: 1.2s; opacity: 0; }
+.anim-delay-5 { animation-delay: 1.5s; opacity: 0; }
+.anim-delay-6 { animation-delay: 2s; opacity: 0; }
+
+/* === SECTION STYLES === */
+section { width: 100%; }
+.section-paper { background: var(--paper); }
+.section-off-white { background: var(--off-white); }
+.section-gradient { background: linear-gradient(180deg, var(--off-white), var(--paper)); }
+.section-gradient-reverse { background: linear-gradient(180deg, var(--paper) 0%, var(--off-white) 50%, var(--paper) 100%); }
+
+.container { max-width: 1152px; margin: 0 auto; padding: 0 24px; }
+.container-sm { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+.container-xs { max-width: 768px; margin: 0 auto; padding: 0 24px; }
+
+.py-section { padding-top: 80px; padding-bottom: 80px; }
+@media (min-width: 768px) { .py-section { padding-top: 128px; padding-bottom: 128px; } }
+
+/* === COVER === */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--off-white) 0%, var(--paper) 50%, var(--off-white) 100%);
+}
+.cover-border-outer { position: absolute; inset: 16px; border: 1px solid rgba(184,134,78,0.2); pointer-events: none; }
+.cover-border-inner { position: absolute; inset: 24px; border: 1px solid rgba(184,134,78,0.1); pointer-events: none; }
+@media (min-width: 768px) { .cover-border-outer { inset: 32px; } .cover-border-inner { inset: 48px; } }
+
+.corner-ornament {
+  position: absolute;
+  width: 48px; height: 48px;
+  opacity: 0.3;
+}
+@media (min-width: 768px) { .corner-ornament { width: 64px; height: 64px; } }
+.corner-tl { top: 32px; left: 32px; }
+.corner-tr { top: 32px; right: 32px; transform: rotate(90deg); }
+.corner-bl { bottom: 32px; left: 32px; transform: rotate(-90deg); }
+.corner-br { bottom: 32px; right: 32px; transform: rotate(180deg); }
+
+.cover-content { position: relative; text-align: center; padding: 24px; max-width: 896px; margin: 0 auto; }
+.cover-subtitle { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--caramel); margin-bottom: 32px; }
+@media (min-width: 768px) { .cover-subtitle { font-size: 12px; } }
+
+.cover-title { font-size: 3.5rem; font-weight: 700; letter-spacing: -0.02em; line-height: 0.9; }
+@media (min-width: 768px) { .cover-title { font-size: 6rem; } }
+@media (min-width: 1024px) { .cover-title { font-size: 8rem; } }
+.cover-ampersand { display: block; font-size: 1.8rem; font-style: italic; font-weight: 300; margin: 12px 0; color: var(--caramel); }
+@media (min-width: 768px) { .cover-ampersand { font-size: 2.5rem; margin: 16px 0; } }
+
+.cover-wedding-text { font-size: 1.5rem; font-style: italic; color: var(--medium-brown); margin-bottom: 24px; }
+@media (min-width: 768px) { .cover-wedding-text { font-size: 1.875rem; } }
+
+.cover-date { font-size: 14px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--caramel); }
+.cover-date-sub { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--medium-brown); opacity: 0.6; margin-top: 8px; }
+
+.scroll-indicator {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: bounce 2s ease-in-out infinite;
+}
+.scroll-indicator span { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--caramel); opacity: 0.6; }
+.scroll-indicator svg circle.scroll-dot { animation: scrollDot 2s ease-in-out infinite; }
+
+/* === ORNAMENT COMPONENTS === */
+.ornament-divider { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 32px 0; }
+.ornament-divider .line { height: 1px; width: 64px; background: linear-gradient(90deg, transparent, var(--caramel), transparent); }
+.ornament-divider .diamond { width: 8px; height: 8px; transform: rotate(45deg); background: var(--gold); }
+.ornament-divider .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--caramel); }
+.ornament-divider.left { justify-content: flex-start; }
+
+/* === EDITORIAL SECTION === */
+.editorial-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (min-width: 768px) { .editorial-grid { grid-template-columns: 1fr 1fr; gap: 80px; } }
+
+.editorial-photo-wrapper { position: relative; }
+.editorial-photo { width: 100%; max-width: 448px; margin: 0 auto; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.editorial-photo-frame {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(201,151,58,0.2);
+  border-radius: 8px;
+  z-index: -1;
+  max-width: 448px;
+  margin: 0 auto;
+}
+
+.editorial-label { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--caramel); margin-bottom: 16px; }
+.editorial-title { font-size: 2.5rem; font-weight: 700; color: var(--dark-brown); line-height: 1.1; }
+@media (min-width: 768px) { .editorial-title { font-size: 3rem; } }
+.editorial-title .highlight { color: var(--caramel); font-style: italic; }
+
+.editorial-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--medium-brown);
+  line-height: 1.6;
+  border-left: 2px solid var(--gold);
+  padding-left: 24px;
+}
+@media (min-width: 768px) { .editorial-quote { font-size: 1.5rem; } }
+
+.editorial-text { font-size: 14px; color: var(--medium-brown); opacity: 0.8; line-height: 1.7; }
+@media (min-width: 768px) { .editorial-text { font-size: 16px; } }
+
+.editorial-sign { font-size: 1.5rem; font-style: italic; color: var(--caramel); margin-top: 24px; }
+
+/* === SECTION HEADERS === */
+.section-header { text-align: center; margin-bottom: 64px; }
+.section-header .label { font-size: 10px; letter-spacing: 0.4em; text-transform: uppercase; color: var(--caramel); margin-bottom: 16px; }
+.section-header h2 { font-size: 3rem; font-weight: 700; color: var(--dark-brown); }
+@media (min-width: 768px) { .section-header h2 { font-size: 3.75rem; } }
+.section-header h2 .highlight { font-style: italic; color: var(--caramel); }
+
+/* === TIMELINE === */
+.timeline { position: relative; }
+.timeline-line {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, transparent, var(--gold), var(--caramel), var(--gold), transparent);
+}
+@media (min-width: 768px) { .timeline-line { display: block; } }
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 64px;
+}
+@media (min-width: 768px) {
+  .timeline-item {
+    flex-direction: row;
+    margin-bottom: 96px;
+  }
+  .timeline-item.reverse { flex-direction: row-reverse; }
+}
+
+.timeline-content { flex: 1; text-align: center; }
+@media (min-width: 768px) {
+  .timeline-content { text-align: right; padding-right: 48px; }
+  .timeline-item.reverse .timeline-content { text-align: left; padding-right: 0; padding-left: 48px; }
+}
+.timeline-year { font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.timeline-title { font-size: 1.5rem; font-weight: 700; color: var(--dark-brown); margin-top: 8px; margin-bottom: 12px; }
+@media (min-width: 768px) { .timeline-title { font-size: 1.875rem; } }
+.timeline-text { font-size: 14px; color: var(--medium-brown); opacity: 0.8; line-height: 1.6; max-width: 384px; margin: 0 auto; }
+@media (min-width: 768px) {
+  .timeline-content .timeline-text { margin-left: auto; margin-right: 0; }
+  .timeline-item.reverse .timeline-content .timeline-text { margin-left: 0; margin-right: auto; }
+  .timeline-item.reverse .timeline-content .ornament-divider { justify-content: flex-start; }
+  .timeline-content .ornament-divider { justify-content: flex-end; }
+}
+
+.timeline-dot {
+  display: none;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  background: var(--paper);
+  position: relative;
+  z-index: 10;
+  flex-shrink: 0;
+}
+.timeline-dot::after {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media (min-width: 768px) {
+  .timeline-dot { display: flex; align-items: center; justify-content: center; }
+}
+
+.timeline-photo { flex: 1; }
+.timeline-photo .photo-placeholder { width: 100%; max-width: 384px; margin: 0 auto; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+/* === EVENT DETAILS CARDS === */
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+@media (min-width: 768px) { .details-grid { grid-template-columns: repeat(3, 1fr); } }
+
+.detail-card {
+  text-align: center;
+  padding: 32px 40px;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid rgba(184,134,78,0.15);
+  transition: all 0.5s ease;
+}
+.detail-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+.detail-card .icon-wrap { display: flex; justify-content: center; margin-bottom: 20px; }
+.detail-card .card-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--caramel); margin-bottom: 8px; }
+.detail-card .card-value { font-size: 1.25rem; font-weight: 700; color: var(--dark-brown); margin-bottom: 8px; }
+@media (min-width: 768px) { .detail-card .card-value { font-size: 1.5rem; } }
+.detail-card .card-sub { font-size: 12px; color: var(--medium-brown); opacity: 0.7; }
+
+.quote-box {
+  margin-top: 64px;
+  text-align: center;
+  padding: 32px 48px;
+  border-radius: 12px;
+  background: rgba(184,134,78,0.06);
+  border: 1px solid rgba(184,134,78,0.15);
+}
+.quote-box blockquote { font-size: 1.5rem; font-style: italic; color: var(--medium-brown); line-height: 1.5; }
+@media (min-width: 768px) { .quote-box blockquote { font-size: 1.875rem; } }
+
+/* === GALLERY GRID === */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .gallery-grid .span-2 { grid-column: span 2; }
+  .gallery-grid .row-span-2 { grid-row: span 2; }
+}
+.gallery-grid .photo-placeholder { transition: all 0.5s ease; }
+.gallery-grid .photo-placeholder:hover { box-shadow: 0 20px 40px rgba(0,0,0,0.1); transform: scale(1.02); }
+.gallery-desc { font-size: 14px; color: var(--medium-brown); opacity: 0.6; margin-top: 16px; max-width: 448px; margin-left: auto; margin-right: auto; text-align: center; }
+
+/* === INFO CARDS === */
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+@media (min-width: 768px) { .info-grid { grid-template-columns: repeat(2, 1fr); } }
+
+.info-card {
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--off-white);
+  border: 1px solid rgba(184,134,78,0.15);
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.info-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+.info-icon {
+  flex-shrink: 0;
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(184,134,78,0.1);
+}
+.info-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--dark-brown); margin-bottom: 8px; }
+.info-card p { font-size: 14px; color: var(--medium-brown); opacity: 0.8; line-height: 1.6; }
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background: var(--gold);
+  color: var(--paper);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-top: 16px;
+}
+.btn-gold:hover { transform: scale(1.05); opacity: 0.9; }
+
+/* === COUNTDOWN === */
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+@media (min-width: 768px) { .countdown-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; } }
+
+.countdown-card {
+  padding: 24px 32px;
+  border-radius: 12px;
+  background: var(--paper);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid rgba(184,134,78,0.15);
+  text-align: center;
+  transition: all 0.5s ease;
+}
+.countdown-card:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.08); transform: scale(1.02); }
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: block;
+}
+@media (min-width: 768px) { .countdown-number { font-size: 3rem; } }
+@media (min-width: 1024px) { .countdown-number { font-size: 3.75rem; } }
+.countdown-label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--caramel); margin-top: 8px; display: block; }
+
+.countdown-message { font-size: 1.125rem; font-style: italic; color: var(--medium-brown); opacity: 0.7; margin-top: 40px; text-align: center; }
+
+/* === FOOTER === */
+footer { padding: 64px 24px; background: var(--paper); text-align: center; }
+footer h3 { font-size: 1.875rem; font-weight: 700; color: var(--dark-brown); margin-top: 24px; }
+@media (min-width: 768px) { footer h3 { font-size: 2.25rem; } }
+footer h3 .amp { font-style: italic; color: var(--caramel); }
+footer .footer-sub { font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--caramel); margin-top: 12px; }
+footer .footer-line { height: 1px; width: 160px; margin: 32px auto; background: linear-gradient(90deg, var(--dark-brown), var(--caramel), var(--gold), var(--caramel), var(--dark-brown)); }
+footer .footer-made { font-size: 12px; color: var(--medium-brown); opacity: 0.5; margin-top: 24px; }
+footer .footer-hash { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 24px; }
+footer .footer-hash span { font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--caramel); opacity: 0.6; }
+
+/* === NAV DOTS === */
+.nav-dots {
+  position: fixed;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  display: none;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 768px) { .nav-dots { display: flex; } }
+.nav-dot {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-dot .dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  border: 2px solid rgba(184,134,78,0.4);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.nav-dot.active .dot {
+  background: var(--gold);
+  border-color: var(--gold);
+  transform: scale(1.25);
+}
+.nav-dot:hover .dot { border-color: var(--gold); transform: scale(1.1); }
+.nav-dot .tooltip {
+  position: absolute;
+  right: 24px;
+  white-space: nowrap;
+  background: rgba(250,246,238,0.9);
+  color: var(--dark-brown);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid rgba(184,134,78,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.nav-dot:hover .tooltip { opacity: 1; }
+
+/* === ASPECT RATIOS === */
+.aspect-3-4 { aspect-ratio: 3/4; }
+.aspect-4-3 { aspect-ratio: 4/3; }
+.aspect-square { aspect-ratio: 1; }
 </style>
 </head>
 <body>
-<div class="card">
-  <div class="top-border"></div>
-  <div class="inner">
 
-    <div class="eyebrow">✦ Lista de Presentes ✦</div>
-    <h1>Porque Amor se Celebra<br>com PIX</h1>
-    <p class="title-sub">(e nós não temos prato sobrando em casa mesmo)</p>
-    <div class="divider">
-      <div class="line"></div><div class="dot"></div>
-      <div class="dia"></div><div class="dot"></div><div class="line"></div>
+<!-- NAVIGATION DOTS -->
+<nav class="nav-dots" id="navDots">
+  <button class="nav-dot active" data-target="capa"><span class="tooltip">Capa</span><span class="dot"></span></button>
+  <button class="nav-dot" data-target="editorial"><span class="tooltip">Boas-vindas</span><span class="dot"></span></button>
+  <button class="nav-dot" data-target="historia"><span class="tooltip">Nossa História</span><span class="dot"></span></button>
+  <button class="nav-dot" data-target="evento"><span class="tooltip">O Evento</span><span class="dot"></span></button>
+  <button class="nav-dot" data-target="galeria"><span class="tooltip">Galeria</span><span class="dot"></span></button>
+  <button class="nav-dot" data-target="info"><span class="tooltip">Informações</span><span class="dot"></span></button>
+  <button class="nav-dot" data-target="countdown"><span class="tooltip">Contagem</span><span class="dot"></span></button>
+</nav>
+
+<!-- ========== CAPA ========== -->
+<section id="capa" class="cover">
+  <div class="cover-border-outer"></div>
+  <div class="cover-border-inner"></div>
+  <svg class="corner-ornament corner-tl" viewBox="0 0 40 40" fill="none"><path d="M0 0 L15 0 L15 2 L2 2 L2 15 L0 15 Z" fill="var(--gold)"/></svg>
+  <svg class="corner-ornament corner-tr" viewBox="0 0 40 40" fill="none"><path d="M0 0 L15 0 L15 2 L2 2 L2 15 L0 15 Z" fill="var(--gold)"/></svg>
+  <svg class="corner-ornament corner-bl" viewBox="0 0 40 40" fill="none"><path d="M0 0 L15 0 L15 2 L2 2 L2 15 L0 15 Z" fill="var(--gold)"/></svg>
+  <svg class="corner-ornament corner-br" viewBox="0 0 40 40" fill="none"><path d="M0 0 L15 0 L15 2 L2 2 L2 15 L0 15 Z" fill="var(--gold)"/></svg>
+
+  <div class="cover-content">
+    <p class="cover-subtitle font-modern anim-fade-up anim-delay-1">Edição Especial &bull; Celebração do Amor</p>
+    <div class="anim-scale anim-delay-2">
+      <h1 class="cover-title font-editorial">
+        <span class="gold-gradient-text">Flávio</span>
+        <span class="cover-ampersand font-elegant">&amp;</span>
+        <span class="gold-gradient-text">Roseli</span>
+      </h1>
     </div>
-    <div class="sec-hd">— Presentes que farão diferença —</div>
-
-    <div class="gift">
-      <div class="gift-num">01</div>
-      <div class="gift-illo"><img src="Imagens/Massagem Relaxante.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Massagem Relaxante para o Noivo</div>
-        <div class="gift-desc">Depois de ver a conta do casamento, ele vai precisar</div>
-      </div>
-      <div class="gift-val">R$ 252,00</div>
+    <div class="anim-fade-up anim-delay-3" style="display:flex;justify-content:center">
+      <svg viewBox="0 0 200 20" style="width:192px" fill="none">
+        <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="var(--gold)" stroke-width="0.8"/>
+        <path d="M0 10 Q50 20 100 10 Q150 0 200 10" stroke="var(--caramel)" stroke-width="0.5" opacity="0.5"/>
+        <circle cx="100" cy="10" r="2" fill="var(--gold)"/>
+      </svg>
     </div>
-
-    <div class="gift">
-      <div class="gift-num">02</div>
-      <div class="gift-illo"><img src="Imagens/Rolo de Macarrão.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Rolo de Macarrão para a Noiva</div>
-        <div class="gift-desc">Para usar quando — e se — for necessário</div>
-      </div>
-      <div class="gift-val">R$ 147,00</div>
+    <p class="cover-wedding-text font-elegant anim-fade-up anim-delay-4">Nosso Casamento</p>
+    <div class="anim-fade-up anim-delay-5">
+      <!-- <p class="cover-date font-modern">Em breve</p> -->
+      <p class="cover-date-sub font-modern"><b>17/08/2026</b></p>
     </div>
-
-    <div class="gift">
-      <div class="gift-num">03</div>
-      <div class="gift-illo"><img src="Imagens/Capacete para o Noivo.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Capacete para o Noivo</div>
-        <div class="gift-desc">Equipamento de proteção contra o Rolo de Macarrão</div>
-      </div>
-      <div class="gift-val">R$ 148,00</div>
+    <div class="scroll-indicator anim-fade-up anim-delay-6">
+      <span class="font-modern">Role para descobrir</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none">
+        <rect x="1" y="1" width="14" height="22" rx="7" stroke="var(--caramel)" stroke-width="1" opacity="0.4"/>
+        <circle class="scroll-dot" cx="8" cy="8" r="2" fill="var(--gold)"/>
+      </svg>
     </div>
-
-    <div class="gift">
-      <div class="gift-num">04</div>
-      <div class="gift-illo"><img src="Imagens/Controles Remotos.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Conjunto de Controles Remotos</div>
-        <div class="gift-desc">Um para cada — assim ninguém briga pela TV</div>
-      </div>
-      <div class="gift-val">R$ 108,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">05</div>
-      <div class="gift-illo"><img src="Imagens/Doce de Leite.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Muito Doce de Leite</div>
-        <div class="gift-desc">Para o Noivo comer escondido da Noiva</div>
-      </div>
-      <div class="gift-val">R$ 107,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">06</div>
-      <div class="gift-illo"><img src="Imagens/Almoço Caseiro.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">1 Mês de Almoço Garantido em Casa</div>
-        <div class="gift-desc">Porque comida caseira é amor servido no prato</div>
-      </div>
-      <div class="gift-val">R$ 400,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">07</div>
-      <div class="gift-illo"><img src="Imagens/Balança.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Balança para os Noivos</div>
-        <div class="gift-desc">Para não engordarem demais após o casamento</div>
-      </div>
-      <div class="gift-val">R$ 132,50</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">08</div>
-      <div class="gift-illo"><img src="Imagens/Academia.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Academia para os Noivos</div>
-        <div class="gift-desc">Para entrarem em forma depois da Lua de Mel</div>
-      </div>
-      <div class="gift-val">R$ 302,00</div>
-    </div>
-
-    <div class="mini-div">⚽ ◆ ⚽</div>
-    <div class="fut-lbl">— A seção mais importante da lista —</div>
-
-    <div class="fut-block">
-      <div class="gift">
-        <div class="gift-num">09</div>
-        <div class="gift-illo"><img src="Imagens/Camisa do Santos.webp" alt=""></div>
-        <div class="gift-body">
-          <div class="gift-name">Camisa do Santos para o Flávio</div>
-          <div class="gift-desc">Para convencer a Ro a mudar de time — boa sorte</div>
-        </div>
-        <div class="gift-val">R$ 262,00</div>
-      </div>
-
-      <div class="gift" style="border-bottom:none">
-        <div class="gift-num">10</div>
-        <div class="gift-illo"><img src="Imagens/Camisa do Corinthians.jpg" alt=""></div>
-        <div class="gift-body">
-          <div class="gift-name">Camisa do Corinthians para a Ro</div>
-          <div class="gift-desc">Para convencer o Flávio a mudar de time — ainda mais sorte</div>
-        </div>
-        <div class="gift-val">R$ 262,00</div>
-      </div>
-    </div>
-
-    <div class="mini-div" style="margin-bottom:0">✦</div>
-
-    <div class="gift">
-      <div class="gift-num">11</div>
-      <div class="gift-illo"><img src="Imagens/Culinaria.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Curso de Culinária para a Noiva</div>
-        <div class="gift-desc">Para dar uma aquecidinha no coração do Noivo</div>
-      </div>
-      <div class="gift-val">R$ 110,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">12</div>
-      <div class="gift-illo"><img src="Imagens/Netflix.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">12 Meses de Netflix</div>
-        <div class="gift-desc">Séries somos muito viciados — ajuda aí</div>
-      </div>
-      <div class="gift-val">R$ 490,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">13</div>
-      <div class="gift-illo"><img src="Imagens/Dia do Noivo.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Dia do Noivo</div>
-        <div class="gift-desc">Para ficar muito lindo e cheiroso para a noiva</div>
-      </div>
-      <div class="gift-val">R$ 200,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">14</div>
-      <div class="gift-illo"><img src="Imagens/Cueca.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Cueca Chique para o Noivo</div>
-        <div class="gift-desc">Para usar na noite de núpcias com estilo</div>
-      </div>
-      <div class="gift-val">R$ 205,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">15</div>
-      <div class="gift-illo"><img src="Imagens/Calcinha.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Lingerie Chique para a Noiva</div>
-        <div class="gift-desc">Para usar na noite de núpcias com charme</div>
-      </div>
-      <div class="gift-val">R$ 235,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">16</div>
-      <div class="gift-illo"><img src="Imagens/Diarista.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Diarista</div>
-        <div class="gift-desc">Para garantir a limpeza do cafofo de amor</div>
-      </div>
-      <div class="gift-val">R$ 250,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">17</div>
-      <div class="gift-illo"><img src="Imagens/Churrasco.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Kit Churrasco do Patrão</div>
-        <div class="gift-desc">O Noivo garante que você será convidado</div>
-      </div>
-      <div class="gift-val">R$ 350,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">18</div>
-      <div class="gift-illo"><img src="Imagens/Cartões.jpeg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Ajude a Pagar os Cartões</div>
-        <div class="gift-desc">Sério, dá até medo de abrir a fatura</div>
-      </div>
-      <div class="gift-val">R$ 500,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">19</div>
-      <div class="gift-illo"><img src="Imagens/Aluguel.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">14 Meses de Aluguel</div>
-        <div class="gift-desc">Já que a casa própria terá que esperar</div>
-      </div>
-      <div class="gift-val">R$ 500,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">20</div>
-      <div class="gift-illo"><img src="Imagens/Vinte reais.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Fintchy Reais</div>
-        <div class="gift-desc">Só para não dizer que não dei nada!</div>
-      </div>
-      <div class="gift-val">R$ 20,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">21</div>
-      <div class="gift-illo"><img src="Imagens/Cinquenta.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Toma Aqui Uns 50 Reais</div>
-        <div class="gift-desc">Para comprar o que te satisfaz</div>
-      </div>
-      <div class="gift-val">R$ 50,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">22</div>
-      <div class="gift-illo"><img src="Imagens/Eu sou rica.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Só para não dizer que não dei nada</div>
-        <div class="gift-desc">Pode ser 49,00, rsrs — toda contribuição vale</div>
-      </div>
-      <div class="gift-val">R$ 49,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">23</div>
-      <div class="gift-illo"><img src="Imagens/Iluyminação.webp" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Iluminação</div>
-        <div class="gift-desc">Uma luz se abre para nossa Lua de Mel</div>
-      </div>
-      <div class="gift-val">R$ 1.000,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">24</div>
-      <div class="gift-illo"><img src="Imagens/Milagre.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Milagres Acontecem</div>
-        <div class="gift-desc">Se por alguma intervenção divina…</div>
-      </div>
-      <div class="gift-val">R$ 5.000,00</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">25</div>
-      <div class="gift-illo"><img src="Imagens/Buffet.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Primeiro Lugar na Fila do Buffet</div>
-        <div class="gift-desc">Garantia de prato cheio antes de todo mundo</div>
-      </div>
-      <div class="gift-val">R$ 312,14</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">26</div>
-      <div class="gift-illo"><img src="Imagens/Condominio.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Ajude a Pagar o Condomínio</div>
-        <div class="gift-desc">Porque morar em prédio também tem seus boletos</div>
-      </div>
-      <div class="gift-val">R$ 209,90</div>
-    </div>
-
-    <div class="gift">
-      <div class="gift-num">27</div>
-      <div class="gift-illo"><img src="Imagens/Milagre.jpg" alt=""></div>
-      <div class="gift-body">
-        <div class="gift-name">Deus Tocou Seu Coração</div>
-        <div class="gift-desc">E você decidiu abençoar os noivos generosamente</div>
-      </div>
-      <div class="gift-val">R$ 1.040,57</div>
-    </div>
-
-    <div class="pix-sec">
-      <div>
-        <h3>PIX dos Noivos</h3>
-        <div class="pix-row">
-          <span class="pix-lbl">Nome</span>
-          <span class="pix-val">Flávio &amp; Roseli</span>
-        </div>
-        <div class="pix-row">
-          <span class="pix-lbl">Chave</span>
-          <span class="pix-val">roflachiara@gmail.com</span>
-        </div>
-        <div class="pix-row">
-          <span class="pix-lbl">Banco</span>
-          <span class="pix-val">Caixa Econômica Federal</span>
-        </div>
-      </div>
-      
-	  <!-- <div class="qr"> -->
-        <!-- <!-- <span>QR<br>Code<br>PIX</span> --> 
-		<!-- <span> -->
-			<!-- <img src="Imagens/ChavePixFlavioRoseli.png" alt=""> -->
-		<!-- </span> -->
-      <!-- </div> -->
-	  
-      <div class="qr">
-        <div class="gift-illo"><img src="Imagens/ChavePixFlavioRoseli.png" alt=""></div>
-      </div>
-	  
-	  
-    </div>
-
-    <div class="footer">
-      <div class="footer-names">Flávio &amp; Roseli</div>
-      <div class="footer-tag">✦ Com amor, humor e muito obrigado ✦</div>
-    </div>
-
   </div>
-  <div class="bottom-border"></div>
-</div>
+</section>
+
+<!-- ========== EDITORIAL / INTRO ========== -->
+<section id="editorial" class="section-off-white py-section">
+  <div class="container">
+    <div class="editorial-grid">
+      <div class="reveal from-left" style="order:2">
+        <div class="editorial-photo-wrapper">
+          <div class="photo-placeholder aspect-3-4 editorial-photo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Foto Editorial do Casal</span>
+          </div>
+          <div class="editorial-photo-frame"></div>
+        </div>
+      </div>
+      <div class="reveal from-right" style="order:1">
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <p class="editorial-label font-modern">Carta dos Noivos</p>
+          <h2 class="editorial-title font-editorial">Queridos<br><span class="highlight">amigos e família</span></h2>
+          <div class="ornament-divider left"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <blockquote class="editorial-quote font-elegant">&ldquo;O amor não se explica. Ele acontece, transforma e nos guia até encontrarmos nosso destino.&rdquo;</blockquote>
+          <p class="editorial-text font-modern">É com o coração transbordando de alegria que convidamos vocês para celebrarem conosco o início de uma nova história. Cada um de vocês tem um lugar especial em nossas vidas e queremos compartilhar esse momento mágico juntos.</p>
+          <p class="editorial-text font-modern">Preparem-se para uma noite inesquecível, cheia de amor, risadas, dança e muita emoção. Mal podemos esperar para ver todos vocês!</p>
+          <p class="editorial-sign font-elegant">Com amor,<br>Flávio &amp; Roseli</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== NOSSA HISTÓRIA ========== -->
+<section id="historia" class="section-paper py-section">
+  <div class="container-sm">
+    <div class="section-header reveal">
+      <p class="label font-modern">Capítulo Dois</p>
+      <h2 class="font-editorial">Nossa <span class="highlight">História</span></h2>
+      <div style="display:flex;justify-content:center;margin-top:24px">
+        <svg viewBox="0 0 200 20" style="width:192px" fill="none">
+          <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="var(--gold)" stroke-width="0.8"/>
+          <path d="M0 10 Q50 20 100 10 Q150 0 200 10" stroke="var(--caramel)" stroke-width="0.5" opacity="0.5"/>
+          <circle cx="100" cy="10" r="2" fill="var(--gold)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <!-- Item 1 -->
+      <div class="timeline-item reveal from-left">
+        <div class="timeline-content">
+          <span class="timeline-year font-modern">2025</span>
+          <h3 class="timeline-title font-editorial">Onde Tudo Começou</h3>
+          <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="timeline-text font-modern">Um encontro que parecia casual, mas que o destino já tinha planejado. Bastou um olhar para sabermos que algo especial estava nascendo.</p>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-photo">
+          <div class="photo-placeholder aspect-4-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Primeiro encontro</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item reverse reveal from-right">
+        <div class="timeline-content">
+          <span class="timeline-year font-modern">2025</span>
+          <h3 class="timeline-title font-editorial">O Primeiro "Eu Te Amo"</h3>
+          <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="timeline-text font-modern">As palavras que mudaram tudo. Naquele momento, soubemos que não era mais possível imaginar a vida sem o outro.</p>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-photo">
+          <div class="photo-placeholder aspect-4-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Momento especial</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-item reveal from-left">
+        <div class="timeline-content">
+          <span class="timeline-year font-modern">2026</span>
+          <h3 class="timeline-title font-editorial">Nossa Vida Juntos</h3>
+          <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="timeline-text font-modern">Construindo sonhos lado a lado, descobrindo que o verdadeiro lar é onde o outro está.</p>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-photo">
+          <div class="photo-placeholder aspect-4-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>Vida a dois</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="timeline-item reverse reveal from-right">
+        <div class="timeline-content">
+          <span class="timeline-year font-modern">2026</span>
+          <h3 class="timeline-title font-editorial">O Pedido</h3>
+          <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="timeline-text font-modern">O momento em que um "sim" selou a promessa de uma vida inteira juntos. O começo do nosso "para sempre".</p>
+        </div>
+        <div class="timeline-dot"></div>
+        <div class="timeline-photo">
+          <div class="photo-placeholder aspect-4-3">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span>O pedido</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== O GRANDE DIA ========== -->
+<section id="evento" class="section-gradient py-section">
+  <div class="container-sm">
+    <div class="section-header reveal">
+      <p class="label font-modern">Capítulo Três</p>
+      <h2 class="font-editorial">O Grande <span class="highlight">Dia</span></h2>
+      <div style="display:flex;justify-content:center;margin-top:24px">
+        <svg viewBox="0 0 200 20" style="width:192px" fill="none">
+          <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="var(--gold)" stroke-width="0.8"/>
+          <path d="M0 10 Q50 20 100 10 Q150 0 200 10" stroke="var(--caramel)" stroke-width="0.5" opacity="0.5"/>
+          <circle cx="100" cy="10" r="2" fill="var(--gold)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="details-grid">
+      <div class="detail-card reveal">
+        <div class="icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <p class="card-label font-modern">Data</p>
+        <p class="card-value font-editorial">17/08/2026</p>
+        <div class="ornament-divider" style="margin:12px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+        <p class="card-sub font-modern">Salve a data no seu calendário!</p>
+      </div>
+      <div class="detail-card reveal">
+        <div class="icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <p class="card-label font-modern">Horário</p>
+        <p class="card-value font-editorial">19:00</p>
+        <div class="ornament-divider" style="margin:12px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+        <p class="card-sub font-modern">Cerimônia seguida de recepção</p>
+      </div>
+      <div class="detail-card reveal">
+        <div class="icon-wrap">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <p class="card-label font-modern">Local</p>
+        <p class="card-value font-editorial">Coco Bambu</p>
+        <div class="ornament-divider" style="margin:12px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+        <p class="card-sub font-modern">Detalhes em breve</p>
+      </div>
+    </div>
+
+    <div class="quote-box reveal">
+      <blockquote class="font-elegant">&ldquo;Dois corações que se encontraram,<br>e agora batem como um só.&rdquo;</blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ========== GALERIA ========== -->
+<section id="galeria" class="section-off-white py-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="label font-modern">Galeria Editorial</p>
+      <h2 class="font-editorial">Momentos <span class="highlight">Nossos</span></h2>
+      <div style="display:flex;justify-content:center;margin-top:24px">
+        <svg viewBox="0 0 200 20" style="width:192px" fill="none">
+          <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="var(--gold)" stroke-width="0.8"/>
+          <path d="M0 10 Q50 20 100 10 Q150 0 200 10" stroke="var(--caramel)" stroke-width="0.5" opacity="0.5"/>
+          <circle cx="100" cy="10" r="2" fill="var(--gold)"/>
+        </svg>
+      </div>
+      <p class="gallery-desc font-modern">Cada imagem conta um pedaço da nossa história. Em breve, este espaço será preenchido com as memórias mais bonitas que construímos juntos.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="row-span-2 reveal"><div class="photo-placeholder aspect-3-4" style="height:100%"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 1</span></div></div>
+      <div class="reveal"><div class="photo-placeholder aspect-square"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 2</span></div></div>
+      <div class="reveal"><div class="photo-placeholder aspect-square"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 3</span></div></div>
+      <div class="span-2 reveal"><div class="photo-placeholder aspect-4-3"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 4</span></div></div>
+      <div class="row-span-2 reveal"><div class="photo-placeholder aspect-3-4" style="height:100%"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 5</span></div></div>
+      <div class="reveal"><div class="photo-placeholder aspect-square"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 6</span></div></div>
+      <div class="reveal"><div class="photo-placeholder aspect-square"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 7</span></div></div>
+      <div class="span-2 reveal"><div class="photo-placeholder aspect-4-3"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--caramel)" stroke-width="1"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Ensaio 8</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INFORMAÇÕES ========== -->
+<section id="info" class="section-paper py-section">
+  <div class="container-sm">
+    <div class="section-header reveal">
+      <p class="label font-modern">Informações</p>
+      <h2 class="font-editorial">Tudo que você <span class="highlight">precisa saber</span></h2>
+      <div style="display:flex;justify-content:center;margin-top:24px">
+        <svg viewBox="0 0 200 20" style="width:192px" fill="none">
+          <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="var(--gold)" stroke-width="0.8"/>
+          <path d="M0 10 Q50 20 100 10 Q150 0 200 10" stroke="var(--caramel)" stroke-width="0.5" opacity="0.5"/>
+          <circle cx="100" cy="10" r="2" fill="var(--gold)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card reveal from-left">
+        <div class="info-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </div>
+        <div>
+          <h3 class="font-editorial">Dress Code</h3>
+          <div class="ornament-divider left" style="margin:8px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="font-modern">Traje Esporte Fino. Venham elegantes para celebrar conosco! Sugerimos tons neutros e pastéis.</p>
+        </div>
+      </div>
+      <div class="info-card reveal from-right">
+        <div class="info-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+        </div>
+        <div>
+          <h3 class="font-editorial">Como Chegar</h3>
+          <div class="ornament-divider left" style="margin:8px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="font-modern">O endereço detalhado e mapa serão disponibilizados em breve. Fiquem atentos às atualizações!</p>
+        </div>
+      </div>
+      <div class="info-card reveal from-left">
+        <div class="info-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div>
+          <h3 class="font-editorial">Confirme sua Presença</h3>
+          <div class="ornament-divider left" style="margin:8px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="font-modern">Por favor confirme sua presença até [data]. Sua presença é o nosso maior presente!</p>
+        </div>
+      </div>
+      <div class="info-card reveal from-right">
+        <div class="info-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <div>
+          <h3 class="font-editorial">Lista de Presentes</h3>
+          <div class="ornament-divider left" style="margin:8px 0"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+          <p class="font-modern">Preparamos uma lista especial com carinho. Clique no botão abaixo para acessar.</p>
+          <a href="lista.html" target="_blank" class="btn-gold font-modern">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Ver Lista de Presentes
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTAGEM REGRESSIVA ========== -->
+<section id="countdown" class="section-gradient py-section">
+  <div class="container-xs" style="text-align:center">
+    <div class="reveal">
+      <p class="font-modern" style="font-size:10px;letter-spacing:0.4em;text-transform:uppercase;color:var(--caramel);margin-bottom:16px">Contagem Regressiva</p>
+      <h2 class="font-editorial" style="font-size:3rem;font-weight:700;color:var(--dark-brown);margin-bottom:8px">Falta <span style="font-style:italic;color:var(--caramel)">pouco!</span></h2>
+      <div style="display:flex;justify-content:center;margin:16px 0 48px">
+        <svg viewBox="0 0 200 20" style="width:192px" fill="none">
+          <path d="M0 10 Q50 0 100 10 Q150 20 200 10" stroke="var(--gold)" stroke-width="0.8"/>
+          <path d="M0 10 Q50 20 100 10 Q150 0 200 10" stroke="var(--caramel)" stroke-width="0.5" opacity="0.5"/>
+          <circle cx="100" cy="10" r="2" fill="var(--gold)"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="countdown-grid reveal">
+      <div class="countdown-card">
+        <span class="countdown-number gold-gradient-text font-editorial" id="cd-dias">--</span>
+        <span class="countdown-label font-modern">Dias</span>
+      </div>
+      <div class="countdown-card">
+        <span class="countdown-number gold-gradient-text font-editorial" id="cd-horas">--</span>
+        <span class="countdown-label font-modern">Horas</span>
+      </div>
+      <div class="countdown-card">
+        <span class="countdown-number gold-gradient-text font-editorial" id="cd-minutos">--</span>
+        <span class="countdown-label font-modern">Minutos</span>
+      </div>
+      <div class="countdown-card">
+        <span class="countdown-number gold-gradient-text font-editorial" id="cd-segundos">--</span>
+        <span class="countdown-label font-modern">Segundos</span>
+      </div>
+    </div>
+
+    <p class="countdown-message font-elegant reveal">Cada segundo nos aproxima do dia mais feliz das nossas vidas</p>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container-xs reveal">
+    <div class="ornament-divider"><div class="line"></div><div class="diamond"></div><div class="dot"></div><div class="diamond"></div><div class="line"></div></div>
+    <h3 class="font-editorial">Flávio <span class="amp font-elegant">&amp;</span> Roseli</h3>
+    <p class="footer-sub font-modern">Celebrando o amor</p>
+    <div class="footer-line"></div>
+    <p class="footer-made font-modern">Feito com amor para nossos convidados especiais</p>
+    <div class="footer-hash">
+      <span style="font-size:1.25rem">💍</span>
+      <span class="font-modern">#FlávioERoseli</span>
+      <span style="font-size:1.25rem">💍</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+// === COUNTDOWN ===
+const WEDDING_DATE = '2026-08-17T19:00:00';
+function updateCountdown() {
+  const diff = new Date(WEDDING_DATE).getTime() - Date.now();
+  if (diff <= 0) {
+    document.getElementById('cd-dias').textContent = '00';
+    document.getElementById('cd-horas').textContent = '00';
+    document.getElementById('cd-minutos').textContent = '00';
+    document.getElementById('cd-segundos').textContent = '00';
+    return;
+  }
+  const d = Math.floor(diff / (1000*60*60*24));
+  const h = Math.floor((diff / (1000*60*60)) % 24);
+  const m = Math.floor((diff / 1000 / 60) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+  document.getElementById('cd-dias').textContent = String(d).padStart(2,'0');
+  document.getElementById('cd-horas').textContent = String(h).padStart(2,'0');
+  document.getElementById('cd-minutos').textContent = String(m).padStart(2,'0');
+  document.getElementById('cd-segundos').textContent = String(s).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// === SCROLL REVEAL (IntersectionObserver) ===
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.15 });
+reveals.forEach(el => revealObserver.observe(el));
+
+// === NAVIGATION DOTS ===
+const sectionIds = ['capa','editorial','historia','evento','galeria','info','countdown'];
+const navBtns = document.querySelectorAll('.nav-dot');
+
+navBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.getAttribute('data-target');
+    document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navBtns.forEach(b => b.classList.remove('active'));
+      const activeBtn = document.querySelector('.nav-dot[data-target="' + entry.target.id + '"]');
+      if (activeBtn) activeBtn.classList.add('active');
+    }
+  });
+}, { threshold: 0.3 });
+
+sectionIds.forEach(id => {
+  const el = document.getElementById(id);
+  if (el) sectionObserver.observe(el);
+});
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"f0f03d0605bf45f1a3b17cf7d5e6861f","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
